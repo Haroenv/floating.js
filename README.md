@@ -7,6 +7,16 @@ Let a few elements float infinitely up your page
 * You can install it via `npm`, and browserify it in your page
 * You can download the script and embed it in your page
 
+```js
+/**
+ * Float a number of things up on a page (hearts, flowers, 👌 ...)
+ * @param {string}  content  the character or string to float
+ * @param {int}     number   the number of items
+ * @param {int}     duration the amount of seconds it takes to float up (default 10s)
+ */
+floating(content,number,duration)
+```
+
 ## Example
 
 All that was needed to make this example ([haroen.me/floating.js](https://haroen.me/floating.js)) work is this:
