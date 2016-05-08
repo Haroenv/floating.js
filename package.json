@@ -1,0 +1,20 @@
+{
+  "name": "floating.js",
+  "version": "0.1.0",
+  "description": "Float a number of things up on a page (hearts, flowers, 👌 ...)",
+  "main": "floating.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haroenv/floating.js.git"
+  },
+  "keywords": [
+    "floating",
+    "hearts"
+  ],
+  "author": "Haroen Viaene",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Haroenv/floating.js/issues"
+  },
+  "homepage": "https://haroen.me/floating.js/"
+}
