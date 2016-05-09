@@ -40,6 +40,10 @@ floating("👌",5,8);
 floating("test",3,15);
 ```
 
+# Support
+
+This makes, among others, use of [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). That means you will either have to have a browser supporting this, or use [babel](https://babeljs.io) or another transpiler.
+
 # License
 
 Apache 2.0
