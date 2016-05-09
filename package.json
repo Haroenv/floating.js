@@ -13,8 +13,20 @@
   ],
   "author": "Haroen Viaene",
   "license": "Apache-2.0",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint floating.js"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    }
+  },
   "bugs": {
     "url": "https://github.com/Haroenv/floating.js/issues"
   },
-  "homepage": "https://haroen.me/floating.js/"
+  "homepage": "https://haroen.me/floating.js/",
+  "devDependencies": {
+    "eslint": "^2.9.0"
+  }
 }
