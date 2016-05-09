@@ -13,8 +13,9 @@ Let a few elements float infinitely up your page
  * @param {string}  content  the character or string to float
  * @param {int}     number   the number of items
  * @param {int}     duration the amount of seconds it takes to float up (default 10s)
+ * @param {bool}    repeat   whether the animation repeats (default true)
  */
-floating(content,number,duration)
+floating(content,number,duration,repeat)
 ```
 
 ## Example
