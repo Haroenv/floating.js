@@ -1,5 +1,7 @@
 # Floating.js
 
+[![Build Status](https://travis-ci.org/Haroenv/floating.js.svg?branch=gh-pages)](https://travis-ci.org/Haroenv/floating.js)
+
 Let a few elements float infinitely up your page
 
 # Usage
