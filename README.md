@@ -6,7 +6,7 @@ Let a few elements float infinitely up your page
 
 # Usage
 
-* You can install it via `npm install --save git+https://github.com/Haroenv/floating.js.git`, and browserify it in your page
+* You can install it via `npm install --save floating.js`, and browserify it in your page
 * You can download the script and embed it in your page
 
 ```js
