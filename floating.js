@@ -5,7 +5,6 @@
  * @param {int}     duration the amount of seconds it takes to float up (default 10s)
  * @param {bool}    repeat   whether the animation repeats (default true)
  * @author Haroen Viaene <hello@haroen.me>
- * @version 0.1.0
  */
 (function (root, factory) {
   'use strict';
