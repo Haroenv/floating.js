@@ -67,7 +67,7 @@
     var container = document.createElement('div');
     container.classname = 'float-container';
     for (var i = 0; i < number; i++) {
-      container.innerHTML += `<div style="position: absolute; font-size: 2em; left: 0; bottom: -2em; animation: float ${duration}s ease-in ${animationRepeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+ Math.random()}s;">${content}</div>`;
+      container.innerHTML += `<div style="position: absolute; font-size: 2em; left: 0; bottom: -2em; animation: float ${duration}s ease-in ${repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+ Math.random()}s;">${content}</div>`;
     }
     document.body.appendChild(container);
   };
