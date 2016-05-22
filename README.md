@@ -17,7 +17,12 @@ Let a few elements float infinitely up your page
  * @param {int}     duration the amount of seconds it takes to float up (default 10s)
  * @param {int}     repeat   the number of times you want the animation to repeat (default: 'infinite')
  */
-floating(content,number,duration,repeat)
+floating({
+  content: "🙋",
+  number: 1,
+  duration: 3,
+  repeat: 1
+});
 ```
 
 ## Example
@@ -27,10 +32,28 @@ All that was needed to make this example ([haroen.me/floating.js](https://haroen
 ```html
 <script src="floating.js"></script>
 <script>
-  floating("😇",3,11);
-  floating("👌",5,8);
-  floating("test",3,15);
-  floating("🙋",1,3,1);
+  floating({
+    content: "😇",
+    number: 3,
+    duration: 11
+  });
+  floating({
+    content: "👌",
+    number: 5,
+    duration: 8
+  });
+  floating({
+    content: "test",
+    number: 3,
+    duration: 15
+  });
+  floating({
+    content: "🙋",
+    number: 1,
+    duration: 3,
+    repeat: 1
+  });
+  floating({});
 </script>
 ```
 
@@ -39,10 +62,28 @@ As another option you could do:
 ```js
 import floating from 'floating';
 
-floating("😇",3,11);
-floating("👌",5,8);
-floating("test",3,15);
-floating("🙋",1,3,1);
+floating({
+  content: "😇",
+  number: 3,
+  duration: 11
+});
+floating({
+  content: "👌",
+  number: 5,
+  duration: 8
+});
+floating({
+  content: "test",
+  number: 3,
+  duration: 15
+});
+floating({
+  content: "🙋",
+  number: 1,
+  duration: 3,
+  repeat: 1
+});
+floating({});
 ```
 
 # Support
