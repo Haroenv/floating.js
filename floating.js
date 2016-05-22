@@ -1,17 +1,19 @@
 /**
  * Float a number of things up on a page (hearts, flowers, 👌 ...)
+ * @param {object}  options  all of the options are in an object
+ * ---
  * @param {string}  content  the character or string to float
  * @param {int}     number   the number of items
  * @param {int}     duration the amount of seconds it takes to float up (default 10s)
  * @param {int}     repeat   the number of times you want the animation to repeat (default: 'infinite')
  * @author Haroen Viaene <hello@haroen.me>
  */
-(function (root, factory) {
+(function(root, factory) {
   'use strict';
 
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define([], function () {
+    define([], function() {
       return (root.floating = factory());
     });
   } else if (typeof exports === 'object') {
@@ -23,7 +25,7 @@
     // Browser globals
     root.floating = factory();
   }
-})(this, function () {
+})(this, function() {
   // UMD Definition above, do not remove this line
 
   // To get to know more about the Universal Module Definition
@@ -31,9 +33,12 @@
 
   'use strict';
 
-  var floating = function(content,number,duration,repeat) {
-    duration = duration || 10;
-    repeat = repeat || 'infinite';//@todo: remove from dom after animation
+  var floating = function(options) {
+    options.content = options.content || '👌';
+    options.number = options.number || 1;
+    options.duration = options.duration || 10;
+    options.repeat = options.repeat || 'infinite'; //@todo: remove from dom after animation
+
     var style = document.createElement('style');
     style.id = 'floating-style';
     if (!document.getElementById('floating-style')) {
@@ -66,8 +71,8 @@
 }`;
     var container = document.createElement('div');
     container.classname = 'float-container';
-    for (var i = 0; i < number; i++) {
-      container.innerHTML += `<div style="position: absolute; font-size: 2em; left: 0; bottom: -2em; animation: float ${duration}s ease-in ${repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+ Math.random()}s;">${content}</div>`;
+    for (var i = 0; i < options.number; i++) {
+      container.innerHTML += `<div style="position: absolute; font-size: 2em; left: 0; bottom: -2em; animation: float ${options.duration}s ease-in ${options.repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;">${options.content}</div>`;
     }
     document.body.appendChild(container);
   };
