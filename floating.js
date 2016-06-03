@@ -33,7 +33,7 @@
 
   'use strict';
 
-  var floating = function(options) {
+  function floating(options) {
     options.content = options.content || '👌';
     options.number = options.number || 1;
     options.duration = options.duration || 10;
@@ -44,8 +44,8 @@
     if (!document.getElementById('floating-style')) {
       document.head.appendChild(style);
     };
-    document.getElementById('floating-style').innerHTML = `
-@keyframes float {
+    document.getElementById('floating-style').innerHTML =
+`@keyframes float {
   0% {
     bottom: -2em;
     opacity: 0;
@@ -75,7 +75,7 @@
       container.innerHTML += `<div style="position: absolute; font-size: 2em; left: 0; bottom: -2em; animation: float ${options.duration}s ease-in ${options.repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;">${options.content}</div>`;
     }
     document.body.appendChild(container);
-  };
+  }
 
   return floating;
 
