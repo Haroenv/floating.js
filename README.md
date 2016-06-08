@@ -9,6 +9,8 @@ Let a few elements float infinitely up your page
 * You can install it via `npm install --save floating.js`, and browserify it in your page
 * You can download the script and embed it in your page
 
+[full documentation](https://haroen.me/floating.js/doc/)
+
 ```js
 /**
  * Float a number of things up on a page (hearts, flowers, 👌 ...)
