@@ -60,7 +60,7 @@
 }
 @keyframes float {
   0% {
-    bottom: -2em;
+    bottom: -100%;
     opacity: 0;
     visibility: hidden;
   }
