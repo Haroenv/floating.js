@@ -41,7 +41,7 @@
     options.content = options.content || '👌';
     options.number = options.number || 1;
     options.duration = options.duration || 10;
-    options.repeat = options.repeat || 'infinite'; //@todo: remove from dom after animation
+    options.repeat = options.repeat || 'infinite';
 
     var style = document.createElement('style');
     style.id = 'floating-style';
@@ -85,7 +85,15 @@
     var container = document.createElement('div');
     container.className = 'float-container';
     for (var i = 0; i < options.number; i++) {
-      container.innerHTML += `<div style="position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float ${options.duration}s ease-in ${options.repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;">${options.content}</div>`;
+      var floater = document.createElement('div');
+      floater.innerHTML = options.content;
+      floater.style.cssText = `position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float ${options.duration}s ease-in ${options.repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;`;
+      floater.addEventListener('animationend', function(e){
+        if (e.animationName === 'float') {
+          container.removeChild(floater);
+        }
+      });
+      container.appendChild(floater);
     }
     document.body.appendChild(container);
   }
