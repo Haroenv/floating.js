@@ -101,7 +101,7 @@ floating({});
 
 # Support
 
-This makes, among others, use of [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). That means you will either have to have a browser supporting this, or use [babel](https://babeljs.io) or another transpiler.
+This makes use of css animations, which aren't supported on every version of IE.
 
 # License
 

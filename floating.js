@@ -50,46 +50,13 @@
     if (!document.getElementById('floating-style')) {
       document.head.appendChild(style);
     };
-    document.getElementById('floating-style').innerHTML =
-`.float-container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-@keyframes float {
-  0% {
-    bottom: -100%;
-    opacity: 0;
-    visibility: hidden;
-  }
-  10% {
-    opacity: 1;
-    bottom: 0;
-    visibility: visible;
-  }
-  100% {
-    bottom: 100%;
-  }
-}
-
-@keyframes move {
-  0%,100% {
-    left: -3em;
-  }
-  50% {
-    left: 3em;
-  }
-}`;
+    document.getElementById('floating-style').innerHTML = ".float-container {width: 100vw;height: 100vh;overflow: hidden;position: absolute;top: 0;left: 0;pointer-events: none;}@keyframes float {0% {bottom: -100%;opacity: 0;visibility: hidden;}10% {opacity: 1;bottom: 0;visibility: visible;}100% {bottom: 100%;}}@keyframes move {0%,100% {left: -3em;}50% {left: 3em;}}";
     var container = document.createElement('div');
     container.className = 'float-container';
     for (var i = 0; i < options.number; i++) {
       var floater = document.createElement('div');
       floater.innerHTML = options.content;
-      floater.style.cssText = `position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float ${options.duration}s ease-in ${options.repeat} ${options.direction}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;`;
+      floater.style.cssText = "position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float "+options.duration+"s ease-in "+options.repeat+" "+options.direction+", move  3s ease-in-out infinite; transform: translateX("+Math.random()*100+"vw); animation-delay: "+i+Math.random()+"s;";
       floater.addEventListener('animationend', function(e){
         if (e.animationName === 'float') {
           container.removeChild(floater);
