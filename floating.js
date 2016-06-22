@@ -35,6 +35,7 @@
    * @param {int} [options.number=1] the number of items
    * @param {int} [options.duration=10] the amount of seconds it takes to float up (default 10s)
    * @param {int|string} [options.repeat='infinite'] the number of times you want the animation to repeat (default: 'infinite')
+   * @param {string} [options.direction='normal'] The animation-direction of the main animation (https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)
    * @author Haroen Viaene <hello@haroen.me>
    */
   function floating(options) {
@@ -42,6 +43,7 @@
     options.number = options.number || 1;
     options.duration = options.duration || 10;
     options.repeat = options.repeat || 'infinite';
+    options.direction = options.direction || 'normal';
 
     var style = document.createElement('style');
     style.id = 'floating-style';
@@ -87,7 +89,7 @@
     for (var i = 0; i < options.number; i++) {
       var floater = document.createElement('div');
       floater.innerHTML = options.content;
-      floater.style.cssText = `position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float ${options.duration}s ease-in ${options.repeat}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;`;
+      floater.style.cssText = `position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float ${options.duration}s ease-in ${options.repeat} ${options.direction}, move  3s ease-in-out infinite; transform: translateX(${Math.random()*100}vw); animation-delay: ${i+Math.random()}s;`;
       floater.addEventListener('animationend', function(e){
         if (e.animationName === 'float') {
           container.removeChild(floater);

@@ -18,6 +18,7 @@ Let a few elements float infinitely up your page
  * @param {int}     number   the number of items
  * @param {int}     duration the amount of seconds it takes to float up (default 10s)
  * @param {int}     repeat   the number of times you want the animation to repeat (default: 'infinite')
+ * @param {string} direction the animation-direction of the main animation (default: 'normal')
  */
 floating({
   content: "🙋",
@@ -55,6 +56,11 @@ All that was needed to make this example ([haroen.me/floating.js](https://haroen
     duration: 3,
     repeat: 1
   });
+  floating({
+    content: '<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Weather-snow.svg">',
+    number: 10,
+    direction: 'reverse'
+  });
   floating({});
 </script>
 ```
@@ -84,6 +90,11 @@ floating({
   number: 1,
   duration: 3,
   repeat: 1
+});
+floating({
+  content: '<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Weather-snow.svg">',
+  number: 10,
+  direction: 'reverse'
 });
 floating({});
 ```
