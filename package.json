@@ -16,7 +16,7 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint floating.js",
-    "doc": "jsdoc -R README.md -d doc floating.js"
+    "doc": "jsdoc -t node_modules/hopsdoc -R README.md -d doc floating.js"
   },
   "eslintConfig": {
     "env": {
@@ -29,6 +29,7 @@
   "homepage": "https://haroen.me/floating.js/",
   "devDependencies": {
     "eslint": "^2.9.0",
-    "jsdoc": "^3.4.0"
+    "jsdoc": "^3.4.0",
+    "hopsdoc": "^0.1.7"
   }
 }
