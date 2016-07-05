@@ -1,6 +1,7 @@
 /**
  * Float a number of things up on a page (hearts, flowers, 👌 ...)
  * @module floating
+ * @author Haroen Viaene <hello@haroen.me>
  */
 (function(root, factory) {
   'use strict';
@@ -30,13 +31,11 @@
   /**
    * Float a number of things up on a page (hearts, flowers, 👌 ...)
    * @alias module:floating
-   * @param {object} options all of the options are in an object
    * @param {string} [options.content='👌'] the character or string to float
-   * @param {int} [options.number=1] the number of items
-   * @param {int} [options.duration=10] the amount of seconds it takes to float up (default 10s)
-   * @param {int|string} [options.repeat='infinite'] the number of times you want the animation to repeat (default: 'infinite')
+   * @param {number} [options.number=1] the number of items
+   * @param {number} [options.duration=10] the amount of seconds it takes to float up (default 10s)
+   * @param {number|string} [options.repeat='infinite'] the number of times you want the animation to repeat (default: 'infinite')
    * @param {string} [options.direction='normal'] The animation-direction of the main animation (https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)
-   * @author Haroen Viaene <hello@haroen.me>
    */
   function floating(options) {
     options.content = options.content || '👌';
