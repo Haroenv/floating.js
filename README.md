@@ -1,6 +1,7 @@
 # Floating.js
 
-[![Build Status](https://travis-ci.org/Haroenv/floating.js.svg?branch=gh-pages)](https://travis-ci.org/Haroenv/floating.js)[![npm version](https://badge.fury.io/js/floating.js.svg)](https://www.npmjs.com/package/floating.js)
+[![Build Status](https://travis-ci.org/Haroenv/floating.js.svg?branch=gh-pages)](https://travis-ci.org/Haroenv/floating.js)
+[![npm version](https://badge.fury.io/js/floating.js.svg)](https://www.npmjs.com/package/floating.js)
 
 Let a few elements float infinitely up your page
 
