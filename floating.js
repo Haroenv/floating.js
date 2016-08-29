@@ -55,7 +55,7 @@
     for (var i = 0; i < options.number; i++) {
       var floater = document.createElement('div');
       floater.innerHTML = options.content;
-      floater.style.cssText = "position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float "+options.duration+"s ease-in "+options.repeat+" "+options.direction+", move  3s ease-in-out infinite; transform: translateX("+Math.random()*100+"vw); animation-delay: "+i+Math.random()+"s;";
+      floater.style.cssText = "position: absolute; font-size: 2em; left: 0; bottom: -100%; animation: float "+options.duration+"s ease-in "+i*Math.random()+"s "+options.repeat+" "+options.direction+", move  3s ease-in-out infinite; transform: translateX("+Math.random()*100+"vw);";
       floater.addEventListener('animationend', function(e){
         if (e.animationName === 'float') {
           container.removeChild(floater);
