@@ -5,7 +5,7 @@
   "main": "floating.js",
   "scripts": {
     "test": "npm run lint",
-    "rollup": "rollup -c",
+    "build": "rollup -c",
     "prepublish": "npm run build && npm run doc",
     "lint": "eslint lib/main.js",
     "doc": "jsdoc -t node_modules/hopsdoc -R README.md -d doc lib/main.js"
