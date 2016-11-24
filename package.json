@@ -3,6 +3,10 @@
   "version": "2.5.2",
   "description": "Float a number of things up on a page (hearts, flowers, 👌 ...)",
   "main": "floating.js",
+  "scripts": {
+
+    "test": "eslint lib/main.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Haroenv/floating.js.git"
@@ -15,21 +19,31 @@
   "license": "Apache-2.0",
   "scripts": {
     "test": "npm run lint",
-    "lint": "eslint floating.js",
-    "doc": "jsdoc -t node_modules/hopsdoc -R README.md -d doc floating.js"
+    "rollup": "rollup -c",
+    "prepublish": "npm run build && npm run doc",
+    "lint": "eslint lib/main.js",
+    "doc": "jsdoc -t node_modules/hopsdoc -R README.md -d doc lib/main.js"
   },
   "eslintConfig": {
     "env": {
       "es6": true
-    }
+    },
+    "extends": "xo-space/browser"
   },
   "bugs": {
     "url": "https://github.com/Haroenv/floating.js/issues"
   },
   "homepage": "https://haroen.me/floating.js/",
   "devDependencies": {
-    "eslint": "^2.9.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "eslint": "^3.4.0",
+    "eslint-config-xo-space": "^0.15.0",
+    "hopsdoc": "haroenv/hopsdoc#v0.1.9",
     "jsdoc": "^3.4.0",
-    "hopsdoc": "^0.1.7"
+    "jsdoc-babel": "^0.2.1",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-uglify": "^1.0.1"
   }
 }

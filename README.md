@@ -81,7 +81,7 @@ All that was needed to make this example ([haroen.me/floating.js](https://haroen
 As another option you could do:
 
 ```js
-import floating from 'floating';
+import floating from 'floating.js';
 
 floating({
   content: "😇",
