@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run lint",
     "build": "rollup -c",
-    "prepublish": "npm run build && npm run doc",
+    "prepublish": "npm run build",
     "lint": "eslint lib/main.js",
     "doc": "jsdoc -t node_modules/hopsdoc -R README.md -d doc lib/main.js"
   },
