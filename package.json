@@ -17,7 +17,9 @@
   },
   "keywords": [
     "floating",
-    "hearts"
+    "hearts",
+    "element",
+    "infinite",
   ],
   "author": "Haroen Viaene",
   "license": "Apache-2.0",
