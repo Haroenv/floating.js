@@ -1,6 +1,6 @@
 {
   "name": "floating.js",
-  "version": "2.7.2",
+  "version": "2.7.3",
   "description": "Float a number of things up on a page (hearts, flowers, 👌 ...)",
   "main": "build/floating.js",
   "module": "build/floating.es.js",
@@ -15,7 +15,10 @@
     "type": "git",
     "url": "git+https://github.com/Haroenv/floating.js.git"
   },
-  "files": ["lib/", "build/"],
+  "files": [
+    "lib/",
+    "build/"
+  ],
   "keywords": [
     "floating",
     "hearts",
