@@ -29,7 +29,9 @@
     "snow",
     "christmas",
     "element",
-    "infinite"
+    "elements",
+    "infinite",
+    "css",
   ],
   "author": "Haroen Viaene",
   "license": "Apache-2.0",
