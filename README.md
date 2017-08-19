@@ -45,7 +45,7 @@ floating({
 All that was needed to make this example ([haroen.me/floating.js](https://haroen.me/floating.js)) work is this:
 
 ```html
-<script src="floating.js"></script>
+<script src="https://unpkg.com/floating.js"></script>
 <script>
   floating({
     content: "😇",
