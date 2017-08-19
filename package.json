@@ -15,10 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/Haroenv/floating.js.git"
   },
-  "files": [
-    "lib/",
-    "build/"
-  ],
+  "files": ["lib/", "build/"],
   "keywords": [
     "floating",
     "hearts",
@@ -39,8 +36,11 @@
     },
     "extends": "xo-space/browser",
     "rules": {
-      "comma-dangle": "always",
-      "no-mixed-operator": "off"
+      "comma-dangle": "off",
+      "no-mixed-operators": "off",
+      "indent": "off",
+      "object-curly-spacing": "off",
+      "operator-linebreak": "off"
     }
   },
   "bugs": {
